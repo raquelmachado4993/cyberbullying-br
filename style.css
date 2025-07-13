@@ -1,0 +1,51 @@
+/* Fundo geral em rosa claro pastel */
+body, .stApp {
+    background-color: black;
+    font-family: 'sans-serif';
+    text-align: justify; !important;
+}
+
+/* Títulos principais */
+h1, h2, h3 {
+    color: #d6336c;
+}
+
+/* Botões em rosa vibrante com hover */
+button[kind="primary"] {
+    background-color: pink !important;
+    color: blue !important;
+    font-weight: bold;
+    border-radius: 12px;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button[kind="primary"]:hover {
+    background-color: #d81b60 !important;
+}
+
+/* Campos de texto personalizados */
+textarea, input[type="text"], input[type="email"] {
+    background-color: #fff0f5 !important;
+    border: 1px solid #f8bbd0 !important;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'sans-serif';
+}
+
+/* Caixas de saída (mensagens, classificações, etc.) */
+.stMarkdown {
+    background-color: olive;
+    border-radius: 12px;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+/* Rodapé oculto */
+footer {
+    visibility: hidden;
+}

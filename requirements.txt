@@ -1,0 +1,7 @@
+pandas
+numpy
+emoji
+scikit-learn
+joblib
+nltk
+streamlit-option-menu
