@@ -257,8 +257,8 @@ if selected == "Aplicação":
             
             if tipo == "SVM":
                 # Carregando o modelo e o vetor
-                modelo = fun.carregarmodelo('/scripts/finalized_svm_model.joblib')
-                vectorizer = fun.carregarmodelo('/scripts/finalized_svm_vectorizer.joblib')
+                modelo = fun.carregarmodelo('finalized_svm_model.joblib')
+                vectorizer = fun.carregarmodelo('finalized_svm_vectorizer.joblib')
                 
                 # Mostra a resposta da análise aqui 
                 resp, flag = fun.classificar_frase_svm(modelo,vectorizer,input_text)
@@ -270,8 +270,8 @@ if selected == "Aplicação":
 
             elif tipo == "NB":
                 # Carregando o modelo e o vetor
-                modelo_nb = fun.carregarmodelo('/scripts/finalized_nb_model.joblib')
-                vectorizer_nb = fun.carregarmodelo('/scripts/finalized_nb_vectorizer.joblib')
+                modelo_nb = fun.carregarmodelo('finalized_nb_model.joblib')
+                vectorizer_nb = fun.carregarmodelo('finalized_nb_vectorizer.joblib')
                 
                 # Mostra a resposta da análise aqui 
                 resp, flag = fun.classificar_frase_nb(modelo_nb,vectorizer_nb,input_text)
