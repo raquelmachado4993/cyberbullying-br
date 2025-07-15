@@ -140,7 +140,7 @@ if selected == "Recursos":
                 
                 
                 ***Código fonte***
-                >  Aqui está o [link](vou colocar) para o Github 
+                >  https://github.com/raquelmachado4993/cyberbullying-br 
                 ---
                 ***Dataset***
                 > Aqui está o[link](vou colocar) para o Kaggle
