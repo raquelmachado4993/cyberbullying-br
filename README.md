@@ -38,7 +38,11 @@ Em versões futuras, a aplicação deverá ser aprimorada e adaptada para funcio
 
 ## Disponível em: 
 
+https://cyberbullying-br.streamlit.app/
+
 https://github.com/raquelmachado4993/cyberbullying-br 
+
+
 
 
 ## Como executar o código via container
