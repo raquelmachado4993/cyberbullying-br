@@ -2,53 +2,43 @@
 # Detectando Cyberbullying em Português do Brasil  
 
 
-Esta aplicação tem como objetivo auxiliar na **detecção automática de mensagens com potencial de cyberbullying** em português brasileiro, utilizando
-  **técnicas de aprendizado de máquina (machine learning)** . Você pode analisar frases com dois classificadores diferentes: **SVM (Support Vector Machine)** e **Naive Bayes**.
+Esta aplicação tem como objetivo auxiliar na ampliação dos estudos em **detecção automática de mensagens com potencial de cyberbullying** em português brasileiro investigando o uso de técnicas de **aprendizado de máquina (machine learning)**.
 
-  Ela foi desenvolvida como parte de uma **tese de doutorado** que investiga a exposição de crianças e adolescentes a ameaças nos ambientes digitais. A pesquisa busca apoiar o trabalho pedagógico em conformidade com a **BNCC** (Base Nacional Comum Curricular), a **PNED** (Política Nacional de Educação Digital) e a **E-Ciber** (Estratégia Nacional de Segurança Cibernética).
-
-  A hipótese central considera que uma **taxonomia organizada de ameaças digitais** pode facilitar sua identificação e servir como ferramenta prática em Computação e Educação. Como parte dessa investigação, esta aplicação foi criada para testar o uso de **Inteligência Artificial** como suporte à detecção de mensagens ofensivas.
+A aplicação é um protótipo, isto é, uma pequena amostra como parte de uma pesquisa de Doutorado em Informática que investiga a exposição de crianças e adolescentes a ameaças nos ambientes digitais e propõe o uso de Inteligência Artificial para detectá-las e mitigá-las.
 
 
 ## Como funciona? &#128289;
   
-  Você digita uma frase, e o sistema verifica se ela tem **características similares a mensagens de cyberbullying** , 
-  com base em modelos treinados com dados reais. Para isso, usamos aprendizado de máquina, uma técnica que permite que o sistema aprenda 
-  com exemplos e identifique padrões automaticamente. 
+  Ao digitar uma frase e enviá-la para análise, o sistema verifica se ela tem **características similares a mensagens de cyberbullying**, com base em modelos treinados com dados reais.
 
 
 ##  SVM x Naive Bayes  &#128202;
   
   
- Nesta aplicação, utilizamos dois algoritmos de aprendizado de máquina: Naive Bayes e SVM (Support vector machine). 
- Ambos são capazes de aprender com exemplos previamente classificados para identificar se uma frase pode ser considerada cyberbullying, 
- mas adotam abordagens diferentes.
+Nesta aplicação, utilizamos dois algoritmos de aprendizado de máquina: **Naive Bayes** e **SVM (Support vector machine)**. Ambos são capazes de aprender com exemplos previamente classificados para identificar se uma frase pode ser considerada cyberbullying ou não, mas adotam abordagens diferentes.
 
- O SVM considera o padrão geral da frase como um todo, buscando separar frases ofensivas e não ofensivas com base em limites definidos 
- durante o treinamento. Já, o Naive Bayes se baseia na frequência das palavras, estimando a probabilidade de uma frase ser ofensiva  
- ou não com base nas palavras que ela contém.
+O SVM considera o padrão geral da frase, buscando separar frases ofensivas e não ofensivas com base em limites definidos durante o treinamento. Já, o Naive Bayes se baseia na frequência das palavras e estima a probabilidade de uma frase ser ofensiva ou não com base nas palavras que ela contém.
 
- Em frases curtas com termos mais agressivos, ambos os algoritmos costumam concordar. Em frases mais sutis ou com ironia, o SVM pode 
- oferecer uma análise um pouco mais precisa já que considera mais o contexto. 
+Em frases curtas com termos mais agressivos, ambos os algoritmos costumam concordar. Em frases mais sutis ou com ironia, o SVM pode oferecer uma análise um pouco mais precisa.
 
 ### Como usar? &#128220
   
- Acesse a aba **App**, digite uma frase no campo indicado e selecione o modelo de classificação desejado. 
- A resposta será exíbida em poucos segundos.
+Acesse a aba **App**, digite uma frase no campo indicado e selecione o modelo de classificação desejado. Clique no botão **Analisar**. A resposta será exibida em poucos segundos.
 
- Mais informações sobre o conjunto de dados utilizado estão disponíveis no menu **Recursos**. 
+Mais informações sobre o conjunto de dados utilizado na etapa de treinamento do modelo estão disponíveis no menu Recursos.
 
 ### Importante   &#9888;
   
- Esta ferramenta é apenas um **suporte à detecção** . A determinação de um caso de cyberbullying envolve outros fatores importantes,
-  como **contexto**, **recorrência** e **intenção** . A análise automática não substitui a 
-  avaliação humana. 
+Esta ferramenta é apenas um **suporte à detecção**. A determinação de um caso de cyberbullying envolve outros fatores importantes, como contexto, recorrência e intenção. A análise automática não substitui a avaliação humana.
 
 ### Trabalhos futuros &#128679;
   
-Em versões futuras, a aplicação deverá ser aprimorada e adaptada para funcionar como uma **extensão de navegador** ou um **aplicativo móvel**, permitindo a detecção em tempo real e envio de notificações aos usuários 
-incentivando a reflexão antes de publicar mensagens ofensivas. 
+Em versões futuras, a aplicação deverá ser aprimorada e adaptada para funcionar como uma extensão de navegador e/ou um aplicativo, permitindo a detecção em tempo real e envio de notificações aos usuários incentivando a reflexão antes de publicar mensagens ofensivas. Além disso, o dataset também deve ser aprimorado para incluir exemplos mais diversos e representativos, incluindo textos advindos de outras plataformas.
 
+
+## Disponível em: 
+
+https://github.com/raquelmachado4993/cyberbullying-br 
 
 
 ## Como executar o código via container

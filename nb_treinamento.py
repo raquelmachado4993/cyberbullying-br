@@ -10,9 +10,10 @@ import funcoes as fun
 import joblib
 from joblib import dump, load
 import pprint
+import json
 
 
-# Função para separar emojis como tokens individuais
+# Aqui � pra separar emojis 
 def separar_emojis(texto):
     texto = emoji.replace_emoji(texto, replace=lambda e, data: f' {e} ')
     texto = re.sub(r'\s+', ' ', texto).strip()
@@ -24,7 +25,7 @@ def tokenizer_emoji_aware(text):
     return text.split()
 
 
-# lê o  arquivo do dataset, é um csv
+# arquivo do dataset, � um csv
 df =  fun.carregarCSV('./dataset.csv')
 
 # Aplica separação de emojis ao texto
@@ -46,34 +47,37 @@ vectorizer_nb = TfidfVectorizer(tokenizer=tokenizer_emoji_aware, ngram_range=(1,
 X_train_vec = vectorizer_nb.fit_transform(X_train)
 X_test_vec = vectorizer_nb.transform(X_test)
 
-# salvando o vector 
+# salvando o modelo
 fun.salvarmodelo(vectorizer_nb,'finalized_nb_vectorizer.joblib')
 
-# Treinamento com Naive Bayes
+# Treinamento do modelo com Naive Bayes
 modelo_nb = MultinomialNB()
 modelo_nb.fit(X_train_vec, y_train)
 
-# salvando o modelo
+# Salvando o modelo
 filename = 'finalized_nb_model.joblib'
 fun.salvarmodelo(modelo_nb,filename)
 
-# Predição
+# Predi��o
 y_pred_nb = modelo_nb.predict(X_test_vec)
 
-# Avaliação
+# Avalia��o
 print("\n Relatório de Classificação (Naive Bayes):")
 print(classification_report(y_test, y_pred_nb, digits=4))
 
 print("\n Matriz de Confusão:")
 print(confusion_matrix(y_test, y_pred_nb))
 
-# Cálculo manual das métricas (com base na sua tese)
+# M�tricas
 pos_label = 'cyberbullying' if 'cyberbullying' in y_test.values else 1
 accuracy = accuracy_score(y_test, y_pred_nb)
 precision = precision_score(y_test, y_pred_nb, pos_label=pos_label)
 recall = recall_score(y_test, y_pred_nb, pos_label=pos_label)
 f1 = f1_score(y_test, y_pred_nb, pos_label=pos_label)
 
+# Salvar 
+
+fun.salvar("rel_class_nb.txt","Acuracia: "+str(accuracy)+", Precisao: "+str(precision)+", Recall: "+str(recall)+", F1-Score: "+str(f1)+"")
 print(f"\n Acurácia: {accuracy:.4f}")
 print(f" Precisão: {precision:.4f}")
 print(f" Recall: {recall:.4f}")

@@ -11,6 +11,7 @@ import emoji
 import re
 import funcoes as fun 
 import pickle
+import csv
 
 
 # Função para separar emojis do texto
@@ -69,5 +70,16 @@ def  carregarmodelo(filename):
 
 def carregarCSV(arquivo):
  return pd.read_csv(arquivo,encoding='utf-8')
+
+
+def salvar(nome_ark,arquivo):
+    f = open(nome_ark, "a+")
+    f.write(str(arquivo)+"\r\n")
+    f.close()
+
+
+def ler(arquivo):
+    return  open(arquivo, 'r')
+
 
 

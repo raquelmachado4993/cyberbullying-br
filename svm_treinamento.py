@@ -17,8 +17,8 @@ import pprint
 from datetime import datetime
 import pprint
 import joblib
-
 import  funcoes as fun 
+
 
 
 # Função para separar emojis do texto
@@ -35,10 +35,10 @@ def tokenizer_emoji_aware(text):
 # lê o  arquivo do dataset, é um csv
 df =  fun.carregarCSV('./dataset.csv')
 
-print(datetime.now())
+print(datetime.now()) #talvez precise mostrar o tempo que demorou pra treinar?
 
 df.columns = df.columns.str.strip()
-# Pré-processamento do texto no DataFrame
+# Pré-processamento do texto no DataFrame - usando apenas as colunas importantes do csv
 df['Texto'] = df['Texto'].apply(separar_emojis)
 
 X = df['Texto']
@@ -97,6 +97,9 @@ accuracy = accuracy_score(y_test, y_pred)
 precision = precision_score(y_test, y_pred, pos_label=pos_label)
 recall = recall_score(y_test, y_pred, pos_label=pos_label)
 f1 = f1_score(y_test, y_pred, pos_label=pos_label)
+
+#salvando isso
+fun.salvar("rel_class_svn.txt","Acuracia: "+str(accuracy)+", Precisao: "+str(precision)+", Recall: "+str(recall)+", F1-Score: "+str(f1)+"")
 
 print(f"\nAcurácia: {accuracy:.4f}")
 print(f"Precisão: {precision:.4f}")
