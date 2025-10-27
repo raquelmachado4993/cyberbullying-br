@@ -11,8 +11,8 @@ import numpy as np
 
 # ---- 1) Carregar e preparar ----
 
-#df =  fun.carregarCSV('./dataset_inicial.csv')
-df =  fun.carregarCSV('./dataset_intermediario.csv')
+df =  fun.carregarCSV('./dataset_inicial.csv')
+#df =  fun.carregarCSV('./dataset_intermediario.csv')
 #df = fun.carregarCSV('./dataset.csv')
 df.columns = df.columns.str.strip()
 df['Classific'] = df['Classific'].astype(str).str.strip().str.lower()
@@ -52,12 +52,12 @@ plt.xlabel(f'Component 1 (TruncatedSVD) – {var1:.2f}% variance explained')
 plt.ylabel(f'Component 2 (TruncatedSVD) – {var2:.2f}% variance explained')
 
 plt.title(
-    'Dispersion of classes after balancing \n'
+    'Dispersion of classes before balancing \n'
     f'TF-IDF (1–2 grams), vocab size={vocab_size}, N={N}'
 )
 
 plt.legend(title=f'Counts  |  n_cyberbullying={n_neg}  •  cyberbullying={n_pos}')
 plt.grid(True, linewidth=0.4, alpha=0.6)
 plt.tight_layout()
-plt.savefig('figure_dispersion_intermediario_new.png', dpi=300, bbox_inches='tight')
+plt.savefig('figure_dispersion_inicial_new2.png', dpi=300, bbox_inches='tight')
 # plt.show()
