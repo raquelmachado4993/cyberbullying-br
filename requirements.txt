@@ -4,5 +4,6 @@ emoji
 scikit-learn
 joblib
 nltk
+streamlit>=1.52.0
 streamlit-option-menu
 altair<6
