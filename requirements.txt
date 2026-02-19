@@ -6,4 +6,3 @@ joblib
 nltk
 streamlit-option-menu
 altair<6
-imghdr
