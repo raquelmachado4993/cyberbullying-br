@@ -5,4 +5,5 @@ scikit-learn
 joblib
 nltk
 streamlit-option-menu
-altair<5
+altair<6
+imghdr
